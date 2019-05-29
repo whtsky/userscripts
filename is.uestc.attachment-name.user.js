@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name 电子科大信软学院 - 修正附件下载文件名
-// @version 1
+// @version 2
 // @match http://www.is.uestc.edu.cn/news.do
+// @match http://www.is.uestc.edu.cn/notice.do
 // @grant none
 // ==/UserScript==
 
