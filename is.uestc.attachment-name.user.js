@@ -1,9 +1,13 @@
 // ==UserScript==
 // @name 电子科大信软学院 - 修正附件下载文件名
+// @description 让电子科大信软学院网站里的附件在下载时显示正确的文件名
 // @version 3
 // @match http://www.is.uestc.edu.cn/news.do
 // @match http://www.is.uestc.edu.cn/notice.do
 // @grant none
+// @downloadURL https://userscripts.tt.codes/is.uestc.attachment-name.user.js
+// @updateURL https://userscripts.tt.codes/is.uestc.attachment-name.user.js
+// @supportURL https://github.com/whtsky/userscripts/issues
 // ==/UserScript==
 
 const attachmentRe = /附件\d+[-：](.+)$/

@@ -5,6 +5,9 @@
 // @description 将 TJUPT 中的外链转换为直接链接
 // @match https://tjupt.org/*
 // @grant none
+// @downloadURL https://userscripts.tt.codes/tjupt-direct_links.user.js
+// @updateURL https://userscripts.tt.codes/tjupt-direct_links.user.js
+// @supportURL https://github.com/whtsky/userscripts/issues
 // ==/UserScript==
 
 
