@@ -1,0 +1,20 @@
+{
+  "name": "userscripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:whtsky/userscripts.git",
+  "author": "Wu Haotian <whtsky@gmail.com>",
+  "license": "BSD-3",
+  "devDependencies": {
+    "@types/jquery": "3.3.31",
+    "@types/tampermonkey": "4.0.0",
+    "husky": "3.0.5",
+    "prettier": "1.18.2",
+    "pretty-quick": "1.11.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

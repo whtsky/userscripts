@@ -10,43 +10,41 @@
 // @supportURL https://github.com/whtsky/userscripts/issues
 // ==/UserScript==
 
+dayjs.extend(dayjs_plugin_customParseFormat);
 
-dayjs.extend(dayjs_plugin_customParseFormat)
-
-const now = dayjs()
+const now = dayjs();
 
 function tryParse(lastSuccess) {
-  let d = dayjs(lastSuccess, 'YYYY-M-D H-m-s')
+  let d = dayjs(lastSuccess, "YYYY-M-D H-m-s");
   if (d.isValid()) {
-    return d
+    return d;
   }
-  
-  d = dayjs(lastSuccess, 'M-D H-m-s')
+
+  d = dayjs(lastSuccess, "M-D H-m-s");
   if (d.isValid()) {
     if (d.isAfter(now)) {
-      return d.subtract(1, 'year')
+      return d.subtract(1, "year");
     }
-    return d
+    return d;
   }
-  throw lastSuccess
+  throw lastSuccess;
 }
 
-document.querySelectorAll('table tr').forEach(f => {
-  const lastSuccessNode = f.querySelector('.last_success')
+document.querySelectorAll("table tr").forEach(f => {
+  const lastSuccessNode = f.querySelector(".last_success");
   if (!lastSuccessNode) {
-    if (f.innerHTML.includes('从未')) {
-      f.remove()
+    if (f.innerHTML.includes("从未")) {
+      f.remove();
     }
-    return
+    return;
   }
-  const lastSuccess = lastSuccessNode.textContent.trim()
-  if (lastSuccess.includes('前')) {
-    return
+  const lastSuccess = lastSuccessNode.textContent.trim();
+  if (lastSuccess.includes("前")) {
+    return;
   }
   const t = tryParse(lastSuccess);
-  if (now.diff(t, 'week') > 1) {
-    f.remove()
-    return
+  if (now.diff(t, "week") > 1) {
+    f.remove();
+    return;
   }
-})
-
+});
