@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         天使动漫自动签到打工
-// @version      1
+// @version      1.1
 // @description  天使动漫全自动打工签到脚本 — 完全自动无需任何操作
 // @match        *://tsdm.live/*
 // @grant        GM_getValue
@@ -56,14 +56,9 @@ jQuery(document).ready($ => {
         }, 3000);
       } else {
         next = 21600000;
-        $('div[class="npadv"] > a').each((index, data) => {
-          setTimeout(() => {
-            $(data).click();
-          }, index * 500);
+        document.querySelectorAll("div.npadv > a").forEach((el, index) => {
+          setTimeout(() => el.click(), index * 500);
         });
-        setTimeout(() => {
-          $('div[id="stopad"] > a').click();
-        }, 3000);
       }
       GM_setValue("worked", now + next);
     } else {
