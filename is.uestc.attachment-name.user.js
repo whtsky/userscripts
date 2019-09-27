@@ -12,10 +12,9 @@
 
 const attachmentRe = /附件\d+[-：](.+)$/
 
-document.querySelectorAll('.text a').forEach((anchor) => {
+document.querySelectorAll('.text a').forEach(anchor => {
   const match = anchor.innerText.match(attachmentRe)
   if (match) {
-      anchor.download = match.pop().trim()
+    anchor.download = match.pop().trim()
   }
 })
-

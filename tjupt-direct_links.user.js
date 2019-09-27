@@ -10,24 +10,22 @@
 // @supportURL https://github.com/whtsky/userscripts/issues
 // ==/UserScript==
 
-
 function removeTo(s, to) {
-  const index = s.search(to);
+  const index = s.search(to)
   if (index !== -1) {
-    return s.substr(index + to.length);
+    return s.substr(index + to.length)
   }
-  return s;
+  return s
 }
 
-
 document.querySelectorAll('a').forEach(anchor => {
-  let link = anchor.href;
-  if (link.startsWith("https://tjupt.org/adredir.php")) {
-    link = removeTo(link, "url=");
-  } else if (link.startsWith("https://tjupt.org/jump_external.php")) {
-    link = removeTo(link, "ext_url=");
+  let link = anchor.href
+  if (link.startsWith('https://tjupt.org/adredir.php')) {
+    link = removeTo(link, 'url=')
+  } else if (link.startsWith('https://tjupt.org/jump_external.php')) {
+    link = removeTo(link, 'ext_url=')
   } else {
-    return;
+    return
   }
-  anchor.href = decodeURIComponent(link);
+  anchor.href = decodeURIComponent(link)
 })

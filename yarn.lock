@@ -40,6 +40,11 @@
   resolved "https://registry.yarnpkg.com/@types/tampermonkey/-/tampermonkey-4.0.0.tgz#fd654ea1191f6ae7acd7e9ddc19c67ed062a1495"
   integrity sha512-StJoz2Cw5bM5Eqp/68O/X1rjI5aw7hGfbji6eXiY+ERN4o8lyfLvJKD91zXmdhUqK157QBjcCtzJUtU+qmAOFA==
 
+"@whtsky/prettier-config@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@whtsky/prettier-config/-/prettier-config-1.0.1.tgz#6819fa0b8606e4466ecefb55fffc944f94bbdfb9"
+  integrity sha512-YACsbRoWATS9uY11pIKFYLICxEyE446YsNjP4Sv4255CMuGqx+R+utbMsL2jqrrZhgEBG4jXaBGvE4BLcuhyHg==
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
