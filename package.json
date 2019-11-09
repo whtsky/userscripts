@@ -10,7 +10,7 @@
     "@types/tampermonkey": "4.0.0",
     "@whtsky/prettier-config": "1.0.1",
     "husky": "3.0.7",
-    "prettier": "1.18.2",
+    "prettier": "1.19.0",
     "pretty-quick": "1.11.1"
   },
   "husky": {
