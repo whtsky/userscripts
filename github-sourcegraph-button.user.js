@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name    Add Sourcegraph Button to GitHub
+// @description Add a 'Sourcrgraph' Button on GitHub repository & file page.
 // @version 1
 // @grant   none
 // @inject-into auto
