@@ -9,7 +9,7 @@
     "@types/jquery": "3.3.31",
     "@types/tampermonkey": "4.0.0",
     "@whtsky/prettier-config": "1.0.1",
-    "husky": "3.1.0",
+    "husky": "4.0.1",
     "prettier": "1.19.1",
     "pretty-quick": "2.0.1"
   },
