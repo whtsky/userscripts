@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name     qiandao.today 隐藏一周内未成功的签到模板
-// @version  1
+// @version  2
 // @match    https://qiandao.today/tpls/public
 // @require  https://unpkg.com/dayjs@1.8.11/dayjs.min.js
 // @require  https://unpkg.com/dayjs@1.8.11/plugin/customParseFormat.js
 // @grant    none
-// @downloadURL https://userscripts.tt.codes/qiandaotoday-hide-invalid.user.js
-// @updateURL https://userscripts.tt.codes/qiandaotoday-hide-invalid.user.js
+// @downloadURL https://userscripts.whtsky.me/qiandaotoday-hide-invalid.user.js
+// @updateURL https://userscripts.whtsky.me/qiandaotoday-hide-invalid.user.js
 // @supportURL https://github.com/whtsky/userscripts/issues
 // ==/UserScript==
 

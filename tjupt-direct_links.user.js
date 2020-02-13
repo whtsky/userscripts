@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name TJUPT - Direct Links
 // @namespace https://github.com/whtsky/userscripts/
-// @version 20190530
+// @version 20200213
 // @description 将 TJUPT 中的外链转换为直接链接
 // @match https://tjupt.org/*
 // @grant none
-// @downloadURL https://userscripts.tt.codes/tjupt-direct_links.user.js
-// @updateURL https://userscripts.tt.codes/tjupt-direct_links.user.js
+// @downloadURL https://userscripts.whtsky.me/tjupt-direct_links.user.js
+// @updateURL https://userscripts.whtsky.me/tjupt-direct_links.user.js
 // @supportURL https://github.com/whtsky/userscripts/issues
 // ==/UserScript==
 

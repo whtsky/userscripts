@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         天使动漫自动签到打工
-// @version      1.2
+// @version      1.3
 // @description  天使动漫全自动打工签到脚本 — 完全自动无需任何操作
 // @match        *://tsdm.live/*
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @run-at       document-end
-// @downloadURL https://userscripts.tt.codes/tsdm.user.js
-// @updateURL https://userscripts.tt.codes/tsdm.user.js
+// @downloadURL https://userscripts.whtsky.me/tsdm.user.js
+// @updateURL https://userscripts.whtsky.me/tsdm.user.js
 // @supportURL https://github.com/whtsky/userscripts/issues
 // ==/UserScript==
 

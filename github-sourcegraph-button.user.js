@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name    Add Sourcegraph Button to GitHub
 // @description Add a 'Sourcrgraph' Button on GitHub repository & file page.
-// @version 2
+// @version 3
 // @grant   none
 // @inject-into auto
-// @downloadURL https://userscripts.tt.codes/github-sourcegraph-button.user.js
-// @updateURL https://userscripts.tt.codes/github-sourcegraph-button.user.js
+// @downloadURL https://userscripts.whtsky.me/github-sourcegraph-button.user.js
+// @updateURL https://userscripts.whtsky.me/github-sourcegraph-button.user.js
 // @supportURL https://github.com/whtsky/userscripts/issues
 // @match   https://github.com/*
 // ==/UserScript==
@@ -62,7 +62,8 @@ function createButton() {
   if (document.querySelector('#userscript__sourcegraph')) {
     return
   }
-  const targetBtn = document.querySelector('#raw-url') || document.querySelector(':not(.commit-links-group) > a.BtnGroup-item')
+  const targetBtn =
+    document.querySelector('#raw-url') || document.querySelector(':not(.commit-links-group) > a.BtnGroup-item')
   if (targetBtn) {
     const newBtn = targetBtn.cloneNode(false)
     newBtn.setAttribute('id', 'userscript__sourcegraph')
