@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name    Add Sourcegraph Button to GitHub
 // @description Add a 'Sourcrgraph' Button on GitHub repository & file page.
-// @version 3
+// @version 4
 // @grant   none
 // @inject-into auto
 // @downloadURL https://userscripts.whtsky.me/github-sourcegraph-button.user.js
@@ -10,8 +10,7 @@
 // @match   https://github.com/*
 // ==/UserScript==
 
-function goToSourcegraph(event) {
-  event.preventDefault()
+function getSourceGraphUrl() {
   var pats = [
     [
       '^/([^/]+)/([^/]+)/tree/([^/]+)$',
@@ -40,8 +39,7 @@ function goToSourcegraph(event) {
       r = new RegExp(pat[0])
       if (pathname.match(r)) {
         pathname2 = pathname.replace(r, pat[1])
-        window.location = 'https://sourcegraph.com' + pathname2
-        return
+        return 'https://sourcegraph.com' + pathname2
       }
     } else {
       if (pat[2] === '') {
@@ -50,20 +48,27 @@ function goToSourcegraph(event) {
       r = new RegExp(pat[2])
       if (pathname.match(r)) {
         pathname2 = pathname.replace(r, pat[3])
-        window.location = 'https://github.com' + pathname2
-        return
+        return 'https://github.com' + pathname2
       }
     }
   }
-  alert('Unable to jump to Sourcegraph (no matching URL pattern).')
+}
+
+function goToSourcegraph(event) {
+  event.preventDefault()
+  const sourceGraphUrl = getSourceGraphUrl()
+  if (sourceGraphUrl) {
+    window.location = sourceGraphUrl
+  } else {
+    alert('Unable to jump to Sourcegraph (no matching URL pattern).')
+  }
 }
 
 function createButton() {
   if (document.querySelector('#userscript__sourcegraph')) {
     return
   }
-  const targetBtn =
-    document.querySelector('#raw-url') || document.querySelector(':not(.commit-links-group) > a.BtnGroup-item')
+  const targetBtn = document.querySelector('#raw-url') || document.querySelector('.file-navigation a.BtnGroup-item')
   if (targetBtn) {
     const newBtn = targetBtn.cloneNode(false)
     newBtn.setAttribute('id', 'userscript__sourcegraph')
@@ -72,6 +77,9 @@ function createButton() {
     newBtn.href = ''
     newBtn.addEventListener('click', goToSourcegraph)
     targetBtn.parentNode.insertBefore(newBtn, targetBtn)
+    targetBtn.parentNode.addEventListener('mouseenter', () => {
+      newBtn.href = getSourceGraphUrl()
+    })
   }
 }
 
