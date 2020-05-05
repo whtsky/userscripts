@@ -6,7 +6,7 @@
   "author": "Wu Haotian <whtsky@gmail.com>",
   "license": "BSD-3",
   "devDependencies": {
-    "@types/jquery": "3.3.37",
+    "@types/jquery": "3.3.38",
     "@types/tampermonkey": "4.0.0",
     "@whtsky/prettier-config": "1.0.1",
     "husky": "4.2.5",
