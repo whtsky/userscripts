@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         天使动漫自动签到打工
-// @version      1.3
+// @version      20200902
 // @description  天使动漫全自动打工签到脚本 — 完全自动无需任何操作
 // @match        *://tsdm.live/*
+// @match        *://www.tsdm39.net/*
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @run-at       document-end
@@ -13,9 +14,9 @@
 
 // From https://github.com/jc3213/user.js/blob/08bdca7cfa338b3550a181d7278e5584fa140075/TSDM.user.js
 
-const workUrl = 'https://tsdm.live/plugin.php?id=np_cliworkdz:work'
+const workUrl = `${location.origin}/plugin.php?id=np_cliworkdz:work`
 
-jQuery(document).ready($ => {
+jQuery(document).ready(($) => {
   var signed = GM_getValue('signed', '')
   var worked = GM_getValue('worked', 0)
   const today = new Date().toLocaleDateString()
@@ -36,11 +37,7 @@ jQuery(document).ready($ => {
   }
   if (location.href === workUrl) {
     let next = 21600000
-    if (
-      $('div[id="messagetext"] > p')
-        .text()
-        .includes('必须与上一次间隔6小时0分钟0秒才可再次进行。')
-    ) {
+    if ($('div[id="messagetext"] > p').text().includes('必须与上一次间隔6小时0分钟0秒才可再次进行。')) {
       const timer = $('div[id="messagetext"] > p')
         .text()
         .split(/[^0123456789]+/g)
