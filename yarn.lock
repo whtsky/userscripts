@@ -19,10 +19,10 @@
   resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.3.tgz#ff5e2f1902969d305225a047c8a0fd5c915cebef"
   integrity sha512-JYM8x9EGF163bEyhdJBpR2QX1R5naCJHC8ucJylJ3w9/CVBaskdQ8WqBf8MmQrd1kRvp/a4TS8HJ+bxzR7ZJYQ==
 
-"@types/tampermonkey@4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@types/tampermonkey/-/tampermonkey-4.0.3.tgz#50235f6b828f2f67172b5acc5017a463bc62cbed"
-  integrity sha512-Dx9A7OneFeVgdRbI0C9FC9hBo5aWvX42/rYDmMjmugsKO5x+iKQ0JbPMjBSjXRgeQ4pNvvMJKnvlBxZzcwxqag==
+"@types/tampermonkey@4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@types/tampermonkey/-/tampermonkey-4.0.4.tgz#38c572d8985e224091f1726ceef91f0a4c48c4e7"
+  integrity sha512-YITwjARFT+Wt7DCi90IxreXqU3uBE5R+dPUmcH1W4XmFp+q3AgpKsUgnSuD9l8GGysm5+RoXrvErpXK1E7mzhg==
 
 "@whtsky/prettier-config@1.0.1":
   version "1.0.1"
