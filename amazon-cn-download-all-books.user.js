@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        亚马逊中国Kindle下载所有内容
 // @description 在亚马逊中国的“管理我的内容和设备”页面增加“下载本页所有内容”按钮，便于备份你买过的 Kindle 书籍。
-// @version 20220603
-// @match       https://www.amazon.cn/gp/digital/fiona/manage
+// @version 20220603.1
+// @match       https://www.amazon.cn/gp/digital/fiona/manage*
 // @grant       none
 // @run-at document-idle
 // @downloadURL https://userscripts.whtsky.me/amazon-cn-download-all-books.user.js
@@ -23,6 +23,16 @@ async function waitGetElement(/** @type {ParentNode} */ root, /** @type {string}
       return result
     }
     await sleep(2000)
+  }
+}
+
+async function waitElementDisappear(/** @type {ParentNode} */ root, /** @type {string} */ selector) {
+  while (true) {
+    const result = root.querySelector(selector)
+    if (result) {
+      await sleep(2000)
+    }
+    return
   }
 }
 
@@ -48,6 +58,8 @@ async function downloadBook(div) {
     )
   confirmDownload.click()
   console.debug('click confirm')
+
+  await waitElementDisappear(document, '.dialogBackdrop_myx')
 }
 async function downloadAllBooksOnPage() {
   const /** @type {HTMLDivElement[]} */ books = Array.from(
@@ -55,7 +67,7 @@ async function downloadAllBooksOnPage() {
     )
   for (const book of books) {
     await downloadBook(book)
-    await sleep(5000)
+    await sleep(15000)
   }
 }
 
