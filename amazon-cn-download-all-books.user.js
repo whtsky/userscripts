@@ -3,6 +3,7 @@
 // @description 在亚马逊中国的“管理我的内容和设备”页面增加“下载本页所有内容”按钮，便于备份你买过的 Kindle 书籍。
 // @version 20220603.1
 // @match       https://www.amazon.cn/gp/digital/fiona/manage*
+// @match       https://www.amazon.cn/mn/dcw/myx.html*
 // @grant       none
 // @run-at document-idle
 // @downloadURL https://userscripts.whtsky.me/amazon-cn-download-all-books.user.js
