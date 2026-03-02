@@ -7,7 +7,7 @@
   "license": "BSD-3",
   "devDependencies": {
     "@types/jquery": "3.5.34",
-    "@types/tampermonkey": "4.20.4",
+    "@types/tampermonkey": "5.0.5",
     "@whtsky/prettier-config": "1.0.1",
     "husky": "5.2.0",
     "prettier": "2.8.8",
